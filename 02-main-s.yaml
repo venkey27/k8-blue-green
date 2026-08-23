@@ -7,7 +7,7 @@ metadata:
   #   app: nginx
   #   version: blue
 spec:
-  type: LoadBalancer
+  type: LoadBalancer  # classic load balancer will be created in aws account
   # Service uses the below labels to select the pods
   selector:
     app: nginx
