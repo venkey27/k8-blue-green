@@ -25,3 +25,5 @@ spec:
 
 # Tear Down / Scale Down the Blue Environment (Cleanup), all blu pods will goes down , just making replicas 0, nothing will happen to delpoyment
 #kubectl patch deployment nginx-blue -p '{"spec":{"replicas":0}}'
+
+# devops
