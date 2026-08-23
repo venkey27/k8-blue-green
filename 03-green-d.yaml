@@ -21,7 +21,7 @@ spec:
       containers:
       - name: nginx
         image: venkey57/blue-green:0.2.0
-        imagePullPolicy: Always
-        ports:
+        imagePullPolicy: Always    # always means, pull the image always when code changes
+        ports: # generally node pulls the image once, when same node pulls 2nd time it wont pull all the code, so we nee to specify imagePullPolicy
         - containerPort: 80
 ---
