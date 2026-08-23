@@ -18,3 +18,10 @@ spec:
     - protocol: TCP
       port: 80 # service port
       targetPort: 80 # container port
+
+
+# Switch Live Traffic from blue to Green (Instant Cutover)
+# kubectl patch svc nginx -p '{"spec":{"selector":{"version":"green"}}}'
+
+# Tear Down / Scale Down the Blue Environment (Cleanup), all blu pods will goes down , just making replicas 0, nothing will happen to delpoyment
+#kubectl patch deployment nginx-blue -p '{"spec":{"replicas":0}}'
