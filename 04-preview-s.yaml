@@ -1,18 +1,19 @@
 # A Service never checks the top-level Deployment metadata.labels. It only checks the Pod's labels defined under spec.template.metadata.labels.
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginx-preview
   # servicer labels
   # labels:
   #   app: nginx
   #   version: blue
 spec:
-  type: LoadBalancer  # classic load balancer will be created in aws account
+  type: LoadBalancer
   # Service uses the below labels to select the pods
   selector:
     app: nginx
-    version: blue
+    version: green
   ports:
     - protocol: TCP
       port: 80 # service port
